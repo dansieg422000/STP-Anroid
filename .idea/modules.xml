@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Android Twitter/Android Twitter.iml" filepath="$PROJECT_DIR$/Android Twitter/Android Twitter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/STproperty/STproperty.iml" filepath="$PROJECT_DIR$/STproperty/STproperty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WheelScroller/WheelScroller.iml" filepath="$PROJECT_DIR$/WheelScroller/WheelScroller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/google-play-services_lib/google-play-services_lib.iml" filepath="$PROJECT_DIR$/google-play-services_lib/google-play-services_lib.iml" />
+    </modules>
+  </component>
+</project>

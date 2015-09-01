@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical" >
+
+    <com.z.stproperty.fonts.HelveticaBold
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="About STProperty"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:background="@drawable/navbar"
+        android:textSize="18sp" />
+
+    <WebView
+        android:id="@+id/aboutStp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp" />
+
+</LinearLayout>

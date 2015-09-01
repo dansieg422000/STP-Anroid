@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout android:layout_toLeftOf="@+id/NearByImage"
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <com.z.stproperty.fonts.HelveticaBold
+                android:id="@+id/ChildText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000" />
+
+            <com.z.stproperty.fonts.HelveticaBold
+                android:id="@+id/KMDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#858585" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/NearByImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/school"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#dbdbdb"
+        android:contentDescription="@null" />
+
+</LinearLayout>

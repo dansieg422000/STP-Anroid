@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="0.7"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/navbar"
+        android:orientation="horizontal" >
+
+            <com.z.stproperty.fonts.HelveticaBold
+                android:id="@+id/NewsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Property News"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+    </LinearLayout>
+
+    <com.z.stproperty.fonts.HelveticaBold
+        android:id="@+id/articleCount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
+        android:text=""
+        android:textColor="#000000" />
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="7"
+        android:background="@null"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/ArticleList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:divider="#000000"
+            android:dividerHeight="1dp" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

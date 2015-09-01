@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/search_header_bg" >
+
+    <LinearLayout android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@+id/SearchAgain"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/downArraow"
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@null"
+            android:src="@drawable/arrowdown" />
+
+        <com.z.stproperty.fonts.Helvetica
+            android:id="@+id/SearchName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Keyword:"
+            android:textColor="#000"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/SearchAgain"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/search_icon" />
+
+</RelativeLayout>

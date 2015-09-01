@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <com.z.stproperty.fonts.HelveticaBold
+        android:id="@+id/HeaderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@drawable/navbar"
+        android:gravity="center"
+        android:text="Agent Details"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <WebView
+        android:id="@+id/agentDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/FooterLayout"
+        android:layout_below="@+id/HeaderTitle"
+        android:layout_margin="10dp" />
+
+    <LinearLayout
+        android:id="@+id/FooterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp" >
+
+            <Button
+                android:id="@+id/ForSale"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:background="@drawable/green_btn"
+                android:text="Properties for Sale"
+                android:textColor="#FFF"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/ForRent"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/green_btn"
+                android:text="Properties for Rent"
+                android:textColor="#FFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/RoomRental"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:background="@drawable/green_btn"
+            android:text="Properties for Room Rental"
+            android:textColor="#FFF"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

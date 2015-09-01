@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        style="@style/layout_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar" >
+
+        <Button
+            android:id="@+id/ResetBtn"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_bg"
+            android:text="Reset"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <com.z.stproperty.fonts.HelveticaBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Search"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/SaveSearchList"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_bg"
+            android:text="History"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/FooterLayout"
+        android:layout_below="@+id/headerLayout" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_mid_selected"
+                    android:gravity="center"
+                    android:paddingBottom="1dp" >
+
+                    <Button
+                        android:id="@+id/ForSaleBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="3.3"
+                        android:background="@drawable/selected_tab"
+                        android:text="Sale"
+                        android:textColor="#007aff" />
+
+                    <Button
+                        android:id="@+id/ForRentBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="3.3"
+                        android:background="@drawable/un_selected_tab"
+                        android:text="Rent"
+                        android:textColor="#007aff" />
+
+                    <Button
+                        android:id="@+id/ForRentalBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="3.3"
+                        android:background="@drawable/un_selected_tab"
+                        android:text="Room Rental"
+                        android:textColor="#007aff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/SearchTerm"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="#dbdbdb"
+                        android:gravity="center_vertical"
+                        android:hint="Tap to enter keyword"
+                        android:inputType="text"
+                        android:paddingLeft="10dp"
+                        android:textSize="13sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/PropertyType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Property Type"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/PropertyTypeSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/typeRightArrow"
+                        android:paddingLeft="5dp"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/typeRightArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:id="@+id/HdbSchemeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="HDB Scheme"
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:id="@+id/HdbScheme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/HdbSchemeArrow"
+                            android:paddingLeft="5dp"
+                            android:text="Select"
+                            android:textColor="@color/rgb_darkblue"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/HdbSchemeArrow"
+                            android:layout_width="15dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/cellarrow" />
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#dbdbdb"
+                        android:contentDescription="@null" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ClassificationLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Property Subtype"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/PropertySubType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/SubtypeRightArrow"
+                        android:paddingLeft="5dp"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/SubtypeRightArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/LocationLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/LocationText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Location"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/LocationTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/LocationRightArrow"
+                        android:layout_toRightOf="@+id/LocationText"
+                        android:gravity="right"
+                        android:paddingLeft="5dp"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/LocationRightArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/PriceLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Price Range"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/PriceRange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/PriceRangeArrow"
+                        android:paddingLeft="5dp"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/PriceRangeArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:id="@+id/HdbCOVLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="COV"
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:id="@+id/HdbCOV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/HdbCOVArrow"
+                            android:paddingLeft="5dp"
+                            android:text="Select"
+                            android:textColor="@color/rgb_darkblue"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/HdbCOVArrow"
+                            android:layout_width="15dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/cellarrow" />
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#dbdbdb"
+                        android:contentDescription="@null" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/SaleRentLayoutParam"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/LandSizeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="Floor Area"
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:id="@+id/LandSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/LandSizeArrow"
+                            android:paddingLeft="5dp"
+                            android:text="Select"
+                            android:textColor="@color/rgb_darkblue"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/LandSizeArrow"
+                            android:layout_width="15dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/cellarrow" />
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#dbdbdb"
+                        android:contentDescription="@null" />
+
+                    <LinearLayout
+                        android:id="@+id/residetialParams"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <RelativeLayout
+                            android:id="@+id/BedroomLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <com.z.stproperty.fonts.Helvetica
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="Bedroom"
+                                android:textColor="#000"
+                                android:textSize="13sp" />
+
+                            <com.z.stproperty.fonts.Helvetica
+                                android:id="@+id/Bedroom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:layout_toLeftOf="@+id/BedroomArrow"
+                                android:paddingLeft="5dp"
+                                android:text="Select"
+                                android:textColor="@color/rgb_darkblue"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/BedroomArrow"
+                                android:layout_width="15dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/cellarrow" />
+                        </RelativeLayout>
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#dbdbdb"
+                            android:contentDescription="@null" />
+
+                        <RelativeLayout
+                            android:id="@+id/BathroomLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <com.z.stproperty.fonts.Helvetica
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="Bathroom"
+                                android:textColor="#000"
+                                android:textSize="13sp" />
+
+                            <com.z.stproperty.fonts.Helvetica
+                                android:id="@+id/Bathroom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:layout_toLeftOf="@+id/BathroomArrow"
+                                android:paddingLeft="5dp"
+                                android:text="Select"
+                                android:textColor="@color/rgb_darkblue"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/BathroomArrow"
+                                android:layout_width="15dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/cellarrow" />
+                        </RelativeLayout>
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#dbdbdb"
+                            android:contentDescription="@null" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/TenureLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="Tenure"
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:id="@+id/Tenure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/TenureArrow"
+                            android:paddingLeft="5dp"
+                            android:text="Select"
+                            android:textColor="@color/rgb_darkblue"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/TenureArrow"
+                            android:layout_width="15dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/cellarrow" />
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#dbdbdb"
+                        android:contentDescription="@null" />
+
+                    <RelativeLayout
+                        android:id="@+id/PsfLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="PSF"
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:id="@+id/Psf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/PsfArrow"
+                            android:paddingLeft="5dp"
+                            android:text="Select"
+                            android:textColor="@color/rgb_darkblue"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/PsfArrow"
+                            android:layout_width="15dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/cellarrow" />
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#dbdbdb"
+                        android:contentDescription="@null" />
+
+                    <RelativeLayout
+                        android:id="@+id/TopLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="Top"
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:id="@+id/Top"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/TopArrow"
+                            android:paddingLeft="5dp"
+                            android:text="Select"
+                            android:textColor="@color/rgb_darkblue"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/TopArrow"
+                            android:layout_width="15dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/cellarrow" />
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#dbdbdb"
+                        android:contentDescription="@null" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/RentalSearchParam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/RoomTypeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="Room Type"
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:id="@+id/RoomType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/RoomTypeArrow"
+                            android:paddingLeft="5dp"
+                            android:text="Select"
+                            android:textColor="@color/rgb_darkblue"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/RoomTypeArrow"
+                            android:layout_width="15dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/cellarrow" />
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#dbdbdb"
+                        android:contentDescription="@null" />
+
+                    <RelativeLayout
+                        android:id="@+id/LeaseTermLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="Lease Term"
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:id="@+id/LeaseTerm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/LeaseTermArrow"
+                            android:paddingLeft="5dp"
+                            android:text="Select"
+                            android:textColor="@color/rgb_darkblue"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/LeaseTermArrow"
+                            android:layout_width="15dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/cellarrow" />
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#dbdbdb"
+                        android:contentDescription="@null" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ListedOnLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Listed On"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/ListedOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/ListedOnArrow"
+                        android:paddingLeft="5dp"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/ListedOnArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/OptionsLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/optionStr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Options"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/Options"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/OptionsArrow"
+                        android:layout_toRightOf="@+id/optionStr"
+                        android:gravity="right"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/OptionsArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/SortByLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Sort By"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/SortBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/SortByArrow"
+                        android:paddingLeft="5dp"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/SortByArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/FooterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp" >
+
+        <Button
+            android:id="@+id/SearchBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/green_btn"
+            android:text="Search"
+            android:textColor="#FFF"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

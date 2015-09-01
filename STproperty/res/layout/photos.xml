@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/GalleryPager"
+        android:layout_above="@+id/thumbImages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+  <Gallery android:id="@+id/thumbImages" 
+      android:layout_width="match_parent"
+      android:layout_height="80dp"
+      android:verticalSpacing="5dp"
+	  android:horizontalSpacing="5dp"
+	  android:columnWidth="94dp"
+      android:background="@android:color/transparent"
+      android:layout_marginBottom="5dp"
+      android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

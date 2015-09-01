@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout android:id="@+id/AddDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ThumbImage"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/appicon" />
+
+            <ImageView
+                android:id="@+id/PriorityImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="2dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageView3"
+            android:layout_toRightOf="@+id/imageLayout"
+            android:orientation="vertical" >
+
+            <com.z.stproperty.fonts.HelveticaBold
+                android:id="@+id/propertyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="#0066b5"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/bedBathLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:src="@drawable/bed" />
+
+                    <com.z.stproperty.fonts.HelveticaBold
+                        android:id="@+id/BedRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="-"
+                        android:textColor="#0066b5"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/shower" />
+
+                    <com.z.stproperty.fonts.HelveticaBold
+                        android:id="@+id/Shower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="-"
+                        android:textColor="#20972a"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <com.z.stproperty.fonts.HelveticaBold
+                    android:id="@+id/PriceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/bedBathLayout"
+                    android:gravity="right"
+                    android:text=""
+                    android:textColor="#20972a"
+                    android:textSize="15sp" />
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:id="@+id/PriceOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/PriceValue"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Classification"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:id="@+id/Classification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Floor Area"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:id="@+id/FloorArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:id="@+id/PropertyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Date Posted"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:id="@+id/DatePosted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/PSFLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="PSF"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:id="@+id/PriceOfPsf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="12dip"
+            android:layout_height="17dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/cellarrow"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:id="@+id/FavIcon"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:src="@drawable/fav" />
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/WedAddLayout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <WebView
+            android:id="@+id/addWeb"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

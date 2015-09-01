@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_gravity="center"
+        android:layout_weight="0.7"
+        android:background="@drawable/navbar"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.z.stproperty.fonts.HelveticaBold
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Properties Nearby"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_gravity="center"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.z.stproperty.fonts.Helvetica
+            android:id="@+id/ForSale"
+            android:layout_width="300dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/tablecell"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="For Sale"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <com.z.stproperty.fonts.Helvetica
+            android:id="@+id/ForRent"
+            android:layout_width="300dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/tablecell"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="For Rent"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <com.z.stproperty.fonts.Helvetica
+            android:id="@+id/ForRental"
+            android:layout_width="300dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/tablecell"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Room Rental"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <com.z.stproperty.fonts.Helvetica
+            android:id="@+id/NewProperties"
+            android:layout_width="300dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/tablecell"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="New Properties"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/Redidential"
+                android:layout_width="112dp"
+                android:layout_height="40dp"
+                android:background="@drawable/roundcorners"
+                android:text="Residential"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/BusinessSpace"
+                android:layout_width="112dp"
+                android:layout_height="40dp"
+                android:background="@drawable/roundcorners1"
+                android:text="Business Space"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

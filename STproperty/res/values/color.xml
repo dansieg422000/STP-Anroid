@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blueText">#007aff</color>
+    <color name="white">#FFF</color>
+    <color name="light_gray">#dbdbdb</color>
+    <color name="light_green">#20972a</color>
+    <color name="darkBlue">#385487</color>
+    <color name="rgb_darkblue">#0069B5</color>
+    <color name="background_window">#FFE5E5E5</color>
+     <color name="background_tab_pressed">#6633B5E5</color>
+</resources>

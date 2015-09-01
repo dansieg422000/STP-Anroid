@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="70dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/AgentImage"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:contentDescription="@null"
+            android:src="@drawable/appicon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical" >
+
+        <com.z.stproperty.fonts.Helvetica
+            android:id="@+id/AgentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="@color/light_green" />
+
+        <com.z.stproperty.fonts.Helvetica
+            android:id="@+id/AgentDesignation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="#000000" />
+
+        <com.z.stproperty.fonts.Helvetica
+            android:id="@+id/MobileNumber"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:text=""
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:layout_gravity="left"
+            android:background="@drawable/button_bg"
+            android:textColor="#FFF" />
+
+        <com.z.stproperty.fonts.Helvetica
+            android:id="@+id/AgencyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+</LinearLayout>

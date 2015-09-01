@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:orientation="vertical" >
+
+    <com.z.stproperty.fonts.HelveticaBold
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/navbar"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="Alert"
+        android:textColor="#FFF"
+        android:textSize="18sp" />
+
+    <com.z.stproperty.fonts.Helvetica
+        android:id="@+id/MessageText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="#000" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="10dp" >
+
+        <Button
+            android:id="@+id/ConfirmDialog"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/dialog_btn"
+            android:text="Ok"
+            android:textColor="#FFF"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>

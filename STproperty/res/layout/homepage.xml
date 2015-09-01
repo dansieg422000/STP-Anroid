@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="3dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btn17"
+            android:layout_width="58dp"
+            android:layout_height="35dp"
+            android:background="@drawable/logo"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:contentDescription="@null"
+            android:src="@drawable/sttext" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.7"
+        android:background="@drawable/navbar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/SignIn"
+            android:layout_width="64dip"
+            android:layout_height="33dip"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/signout"
+            android:scaleType="fitXY"
+            android:text="Sign In"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/SignOut"
+            android:layout_width="64dip"
+            android:layout_height="33dip"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/signout"
+            android:scaleType="fitXY"
+            android:text="Sign Out"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/Register"
+            android:layout_width="64dip"
+            android:layout_height="33dip"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/signout"
+            android:scaleType="fitXY"
+            android:text="Register"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="0.2"
+        android:orientation="horizontal" >
+
+        <View
+            style="@style/layout_horizontal"
+            android:layout_weight="0.3"
+            android:background="@null" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/layout_horizontal"
+            android:layout_weight="0.6"
+            android:background="@null"
+            android:textColor="#009900" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="1.8"
+        android:orientation="horizontal" >
+
+        <View
+            style="@style/layout_horizontal"
+            android:layout_weight="0.1"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/PropertySearch"
+            style="@style/layout_horizontal"
+            android:layout_weight="2"
+            android:background="@drawable/ps" />
+
+        <View
+            style="@style/layout_horizontal"
+            android:layout_weight="0.1"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/NewArticles"
+            style="@style/layout_horizontal"
+            android:layout_weight="2"
+            android:background="@drawable/pnews" />
+
+        <View
+            style="@style/layout_horizontal"
+            android:layout_weight="0.1"
+            android:background="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="0.2"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="1.9"
+        android:orientation="horizontal" >
+
+        <View
+            style="@style/layout_horizontal"
+            android:layout_weight="0.1"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/PropertyNearBy"
+            style="@style/layout_horizontal"
+            android:layout_weight="2"
+            android:background="@drawable/pn" />
+
+        <View
+            style="@style/layout_horizontal"
+            android:layout_weight="0.1"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/Directories"
+            style="@style/layout_horizontal"
+            android:layout_weight="2"
+            android:background="@drawable/agentdir" />
+
+        <View
+            style="@style/layout_horizontal"
+            android:layout_weight="0.1"
+            android:background="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="0.55"
+        android:orientation="horizontal" >
+
+        <View
+            style="@style/layout_horizontal"
+            android:layout_weight="2"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/ForSale"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:cropToPadding="true"
+            android:paddingBottom="3dip"
+            android:paddingTop="6dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/forsale" />
+
+        <ImageButton
+            android:id="@+id/ForRent"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:cropToPadding="true"
+            android:paddingBottom="3dip"
+            android:paddingTop="6dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/forrentgrey" />
+
+        <ImageButton
+            android:id="@+id/RoomRental"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:cropToPadding="true"
+            android:paddingBottom="3dip"
+            android:paddingTop="6dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/r_rent_grey" />
+
+        <View
+            style="@style/layout_horizontal"
+            android:layout_weight="0.02"
+            android:background="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="2.4"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/Condo"
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/condobutton" />
+
+        <ImageButton
+            android:id="@+id/Hdb"
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/hdbbutton" />
+
+        <ImageButton
+            android:id="@+id/Landed"
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/landedbutton" />
+
+        <ImageButton
+            android:id="@+id/Commercial"
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/commercialbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="0.2"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</LinearLayout>

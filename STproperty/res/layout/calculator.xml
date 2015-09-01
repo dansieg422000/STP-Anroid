@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <com.z.stproperty.fonts.HelveticaBold
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:background="@drawable/navbar"
+        android:gravity="center"
+        android:text="Loan Calculator"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@drawable/rounded_white_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <com.z.stproperty.fonts.Helvetica
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Property Price(S$)"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <com.z.stproperty.fonts.Helvetica
+                android:id="@+id/PrpertyPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/plain_et_border"
+                android:gravity="right"
+                android:inputType="numberDecimal"
+                android:maxLength="12"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dbdbdb"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <com.z.stproperty.fonts.Helvetica
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interest Rate(%)"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/InterestRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/plain_et_border"
+                android:gravity="right"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dbdbdb"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <com.z.stproperty.fonts.Helvetica
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Margin of Finance(%)"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/MarginOfFinance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/plain_et_border"
+                android:gravity="right"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dbdbdb"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <com.z.stproperty.fonts.Helvetica
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loan Tenure(Years)"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/LoanTenure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/plain_et_border"
+                android:gravity="right"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dbdbdb"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <com.z.stproperty.fonts.Helvetica
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly Repayment(S$)"
+                android:textColor="@color/light_green"
+                android:textSize="14sp" />
+
+            <com.z.stproperty.fonts.Helvetica
+                android:id="@+id/MonthlyRepay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/light_green"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dbdbdb"
+            android:contentDescription="@null" />
+
+        <Button
+            android:id="@+id/Calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/green_btn"
+            android:contentDescription="@null"
+            android:text="Calculate"
+            android:textColor="#FFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

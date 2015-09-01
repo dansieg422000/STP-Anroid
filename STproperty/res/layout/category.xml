@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_gravity="center"
+        android:layout_weight="0.7"
+        android:background="@drawable/navbar"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.z.stproperty.fonts.HelveticaBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Property News"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="7"
+        android:background="@null"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/CategoryList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="0dp" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

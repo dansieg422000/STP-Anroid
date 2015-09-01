@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<resources>
+  <!--Replace placeholder ID with your tracking ID also replace on sharedfunctions.java -->
+  <string name="ga_trackingId">UA-30192184-4</string>
+
+  <!--Enable automatic activity tracking-->
+  <bool name="ga_autoActivityTracking">true</bool>
+
+  <!--Enable automatic exception tracking-->
+  <bool name="ga_reportUncaughtExceptions">true</bool>
+
+<!-- The screen names that will appear in reports -->
+<string name="com.z.stproperty.Splash">App_Launch</string>
+<string name="com.z.stproperty.HomeActivity">Home</string>
+<string name="com.z.stproperty.PropertyDetail">Property Detail</string>
+<string name="com.z.stproperty.article.Category">News_Categories</string>
+<string name="com.z.stproperty.article.Propertynewsdetail">Latest News Details</string>
+<string name="com.z.stproperty.directory.Directory">Directories</string>
+<string name="com.z.stproperty.directory.DirectoryDetail">Directory Details</string>
+<string name="com.z.stproperty.search.SearchTab">Property Search</string>
+<string name="com.z.stproperty.search.ViewSavedsearch">History</string>
+<string name="com.z.stproperty.history.RecentlyViewed">Recently Viewed</string>
+<string name="com.z.stproperty.favorites.Addedfav">Favourites</string>
+<string name="com.z.stproperty.profile.EnquiryTab">Enquiry</string>
+<string name="com.z.stproperty.profile.AboutSTP">About_Us</string>
+<string name="com.z.stproperty.profile.OutBox">Outbox</string>
+<string name="com.z.stproperty.profile.Register">Register</string>
+<string name="com.z.stproperty.profile.Login">Sign_In</string>
+<string name="com.z.stproperty.profile.ContactUs">Feedback</string>
+<string name="com.z.stproperty.profile.UserProfile">Profile</string>
+<string name="com.z.stproperty.Photos">Image_View</string>
+</resources>

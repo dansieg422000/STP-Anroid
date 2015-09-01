@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/navbar"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp" >
+
+        <com.z.stproperty.fonts.HelveticaBold
+            android:id="@+id/rangeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Price"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.z.stproperty.fonts.HelveticaBold android:id="@+id/FilteredRange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="15dp"
+            android:text="$0-$0"
+            android:textSize="16sp"
+            android:textColor="#000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:padding="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:background="@color/darkBlue"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <com.z.stproperty.fonts.HelveticaBold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textSize="16sp"
+                android:textColor="#FFF"
+                android:gravity="center_horizontal"
+                android:text="Min Range" />
+
+            <com.z.stproperty.fonts.HelveticaBold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textSize="16sp"
+                android:textColor="#FFF"
+                android:gravity="center_horizontal"
+                android:text="Max Range" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#fff"
+            android:padding="12dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <com.evvo.wheelscroller.WheelView
+                android:id="@+id/fromVaue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="5" />
+
+            <com.evvo.wheelscroller.WheelView
+                android:id="@+id/toValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="5" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/donebtn"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/green_btn"
+            android:gravity="center"
+            android:text="Confirm"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</LinearLayout>

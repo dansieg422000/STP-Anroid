@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/navbar" >
+
+        <com.z.stproperty.fonts.HelveticaBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Outbox"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/ClearHistory"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_bg"
+            android:text="Clear All"
+            android:textSize="16sp"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/EnquiryList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:childDivider="#dbdbdb"
+        android:divider="#FFF"
+        android:dividerHeight="2dp"
+        android:groupIndicator="@android:color/transparent"
+        android:smoothScrollbar="true"
+        android:transcriptMode="disabled" >
+    </ExpandableListView>
+
+    <com.z.stproperty.fonts.Helvetica
+        android:id="@+id/errorTxt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center|center_vertical"
+        android:text="Please sign in to continue"
+        android:textColor="@color/blueText"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+</LinearLayout>

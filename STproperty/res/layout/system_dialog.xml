@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:orientation="vertical" >
+    <com.z.stproperty.fonts.HelveticaBold android:id="@+id/DialogTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:background="@drawable/navbar"
+        android:text="STProperty" />
+    <com.z.stproperty.fonts.Helvetica android:id="@+id/BodyText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:text="App requires GPS service.\nDo you want to enable it?" />
+<RelativeLayout android:layout_width="fill_parent"
+    android:paddingBottom="10dp"
+    android:layout_marginTop="8dp"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/YesBtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:background="@drawable/dialog_btn"
+        android:layout_height="40dp"
+        android:text="Yes" />
+    <Button
+        android:id="@+id/NoExit"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:background="@drawable/dialog_btn"
+        android:layout_height="40dp"
+        android:text="No" />
+</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/registerHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar" >
+
+        <com.z.stproperty.fonts.HelveticaBold
+            android:id="@+id/headerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Enquiry"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/ClearBtn"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/button_bg"
+            android:text="Reset"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/aboutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerHeader"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@null"
+            android:padding="3dip"
+            android:src="@drawable/enquiryletter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.z.stproperty.fonts.Helvetica
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Can&apos;t locate your ideal property?"
+                android:textColor="#009900"
+                android:textSize="14sp" />
+
+            <com.z.stproperty.fonts.Helvetica
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leave an enquiry starting your property requirements and let property agents get back to you shortly with their suitable lists."
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/enquiryScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aboutLayout" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/PropertyType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Property Wanted"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/PropertyTypeSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/typeRightArrow"
+                        android:paddingLeft="5dp"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/typeRightArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/classificationLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Classification"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/classification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/classificationArrow"
+                        android:paddingLeft="5dp"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/classificationArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/PropertyWantTo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Want To"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/WantTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/SubtypeRightArrow"
+                        android:paddingLeft="5dp"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/SubtypeRightArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <EditText
+                    android:id="@+id/EnquiryTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/plain_et_border"
+                    android:hint="Enquiry Title"
+                    android:inputType="text"
+                    android:textSize="13sp" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <EditText
+                    android:id="@+id/projectName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/plain_et_border"
+                    android:hint="Project Name"
+                    android:inputType="text"
+                    android:textSize="13sp" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <EditText
+                    android:id="@+id/Remarks"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/plain_et_border"
+                    android:hint="Remarks"
+                    android:inputType="text"
+                    android:textSize="13sp" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/PriceLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Budget Range"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/PriceRange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/PriceRangeArrow"
+                        android:paddingLeft="5dp"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/PriceRangeArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="User Name"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:paddingLeft="5dp"
+                        android:text=""
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Name"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="right"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Email"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/userEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="right"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Contact Number"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/userContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="right"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:id="@+id/BedroomLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="Bedrooms"
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:id="@+id/Bedroom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/BedroomsArrow"
+                            android:gravity="right"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="Select"
+                            android:textColor="@color/rgb_darkblue"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/BedroomsArrow"
+                            android:layout_width="15dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/cellarrow" />
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#dbdbdb"
+                        android:contentDescription="@null" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/districtLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/DistrictStr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="District"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/District"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/DistrictArrow"
+                        android:layout_toRightOf="@+id/DistrictStr"
+                        android:gravity="right"
+                        android:paddingLeft="5dp"
+                        android:text="Select"
+                        android:textColor="@color/rgb_darkblue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/DistrictArrow"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/cellarrow" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:id="@+id/hdbEstate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/EstateLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:id="@+id/stateStr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="Estate"
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+
+                        <com.z.stproperty.fonts.Helvetica
+                            android:id="@+id/Estate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/EstateArrow"
+                            android:layout_toRightOf="@+id/stateStr"
+                            android:gravity="right"
+                            android:paddingLeft="5dp"
+                            android:text="Select"
+                            android:textColor="@color/rgb_darkblue"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/EstateArrow"
+                            android:layout_width="15dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/cellarrow" />
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#dbdbdb"
+                        android:contentDescription="@null" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/SendBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/green_btn"
+                android:text="Enquire"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.z.stproperty.fonts.Helvetica
+        android:id="@+id/errorTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Please sign in to continue"
+        android:textColor="@color/blueText"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

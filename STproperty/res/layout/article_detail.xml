@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/navbar"
+        android:orientation="horizontal" >
+
+        <com.z.stproperty.fonts.HelveticaBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Property News"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/ShareIcon"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp"
+            android:textColor="#FFF"
+            android:background="@drawable/button_bg"
+            android:text="Share" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5fbef"
+        android:orientation="vertical" >
+
+        <com.z.stproperty.fonts.HelveticaBold
+            android:id="@+id/articleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="#FFF"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@null"
+            android:src="@drawable/celborder" />
+
+        <ScrollView
+            style="@style/layout_vertical"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/articlePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="5dp"
+                    android:background="#000000"
+                    android:contentDescription="@null"
+                    android:src="@drawable/appicon" />
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:id="@+id/articlePlurb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <com.z.stproperty.fonts.HelveticaBold
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="By"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/articleAuthor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <com.z.stproperty.fonts.HelveticaBold
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/articlePublishDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <com.z.stproperty.fonts.HelveticaBold
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Source"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <com.z.stproperty.fonts.Helvetica
+                        android:id="@+id/articleSource"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#000"
+                    android:contentDescription="@null" />
+
+                <com.z.stproperty.fonts.Helvetica
+                    android:id="@+id/articleContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#FFF"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
